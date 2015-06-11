@@ -6,56 +6,100 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
 
 	<style>
+		html {
+			font-size: 13px;
+		}
+
 		body {
-			font-family: 'Open Sans', Arial, serif; font-weight: 400;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
+			font-family: 'Open Sans', Arial, serif;
+			font-weight: 400;
 			background-color: #fff;
-			color: rgba(0, 0, 0, .87);
+			color: #455A64;
+			text-align: center;
+			padding: 15px;
+
+			display: flex;
+			display: -ms-flexbox;
+			align-items: center;
+			-ms-flex-align: center;
+			flex-direction: column;
+			-ms-flex-direction: column;
 		}
 
 		h1 {
+			font-size: 2rem;
 			font-weight: 400;
 			margin-bottom: 10px;
+			display: inline;
+			background-color: #eceff1; 
+			-webkit-box-decoration-break: clone;
+			color: #37474F;
+			border-radius: 2px;
+			padding: 10px;
 		}
 
-		p {
+		.subheader {
+			font-size: 1rem;
 			margin-top: 0;
 			margin-bottom: 30px;
 			font-weight: rgba(0, 0, 0, .54);
 		}
 
 		.screen {
-			margin-bottom: 50px;
-			width: 50%;
+			margin-bottom: 10px;
+		}
+
+		.screen img {
+			max-width: 100%;
 		}
 
 		.mailto {
-			margin-bottom: 50px;
+			margin: 20px 0;
+		}
+
+		.mailto a {
+			display: block;
 		}
 
 		.webstore {
 			margin-bottom: 30px;
 		}
+
+		@media screen and (min-width: 500px){
+		  html{
+		    font-size: 14px;
+		  }
+		}
+		@media screen and (min-width: 570px){
+		  html{
+		    font-size: 15px;
+		  }
+		}
+		@media screen and (min-width: 620px){
+		  html{
+		    font-size: 16px;
+		  }
+		}
 	</style>
 </head>
 <body>
 
-	<h1>Plan your day with Tupiq, a beautiful New Tab page</h1>
+	<h1>Plan your day with <span>Tupiq</span>, a beautiful New Tab page</h1>
 
-	<p>Connect to Google Calendar&trade; and get a concise summary of your upcoming events as the day unfolds.</p>
+	<p class="subheader">Connect to Google Calendar&trade; and get a concise summary of your upcoming events as the day unfolds.</p>
 
 	<a href="https://chrome.google.com/webstore/detail/tupiq/ljhnalaggebnjcbhkmhojcpkifbcgcjb" class="webstore">
 		<img src="chromestore-badge.png" />
 	</a>
 
-	<img src="screengrab-1.png" class="screen" />
-	<img src="screengrab-2.png" class="screen" />
-	<img src="screengrab-3.png" class="screen" />
-	<img src="screengrab-4.png" class="screen" />
+	<div class="screens">
+		<div class="screen"><img src="screengrab-1.png" /></div>
+		<div class="screen"><img src="screengrab-3.png" /></div>
+		<div class="screen"><img src="screengrab-4.png" /></div>
+		<div class="screen"><img src="screengrab-2.png" /></div>
+	</div>
 
-	<a href="mailto:wrench@toolben.ch" class="mailto">wrench@toolben.ch</a>
+	<p class="mailto">Drop us a line <a href="mailto:wrench@toolben.ch">wrench@toolben.ch</a></p>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
